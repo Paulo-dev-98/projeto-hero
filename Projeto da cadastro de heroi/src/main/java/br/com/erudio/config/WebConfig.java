@@ -22,9 +22,12 @@ public class WebConfig implements WebMvcConfigurer {
 	}
 	
 	// adicionando cors para todos os dominios (global)
-	public void addCrossMappings(CorsRegistry registry) {
-		registry.addMapping("/**")
-		    .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS", "HEAD", "TRACE", "CONNECT");
+	public void addCorsMappings(CorsRegistry registry) {
+	    registry.addMapping("/**")
+	        .allowedOrigins("http://localhost:4200")
+	        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+	        .allowedHeaders("*")
+	        .allowCredentials(true);
 	}
 	
 	@Override
