@@ -43,7 +43,7 @@ public class HeroiController {
 	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
 	public ResponseEntity<PagedResources<HeroiVO>> findAll(
 			@RequestParam(value="page", defaultValue = "0") int page,
-			@RequestParam(value="limit", defaultValue = "5") int limit,
+			@RequestParam(value="limit", defaultValue = "15") int limit,
 			@RequestParam(value="direction", defaultValue = "asc") String direction,
 			PagedResourcesAssembler assembler) {
 		
