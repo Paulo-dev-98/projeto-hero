@@ -30,8 +30,8 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfo("curso de spring boot 2.1.3",
-				"curso com objetivo de aprender spring", 
+		return new ApiInfo("Projeto de Teste",
+				"projeto de teste para processo seletivo", 
 				"v1", 
 				"termos de serv", 
 				new Contact("", "", ""), 
